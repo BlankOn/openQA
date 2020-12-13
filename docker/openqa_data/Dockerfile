@@ -2,7 +2,7 @@ FROM opensuse/leap:15.2
 LABEL maintainer Jan Sedlak <jsedlak@redhat.com>, Josef Skladanka <jskladan@redhat.com>, wnereiz <wnereiz@eienteiland.org>, Sergio Lindo Mansilla <slindomansilla@suse.com>
 LABEL version="0.3"
 
-RUN zypper --non-interactive in ca-certificates-mozilla git wget
+RUN zypper --non-interactive in ca-certificates-mozilla git wget python
 
 ADD data.template /data
 ADD scripts /scripts
