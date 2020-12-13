@@ -76,8 +76,8 @@ services:
     depends_on:
       - data
       - db
-    deploy:
-      replicas: ${OPENQA_WEBUI_REPLICAS}
+    #deploy:
+      #replicas: ${OPENQA_WEBUI_REPLICAS}
 
   db:
     image: postgres
@@ -96,8 +96,9 @@ services:
       - "9526:9526"
       # Uncomment for SSL access
       # - "443:443"
-    environment:
-      replicas: ${OPENQA_WEBUI_REPLICAS}
+    #environment:
+      #replicas: ${OPENQA_WEBUI_REPLICAS}
+    #volumes:
       # If is needed to set a certificate for SSL
       # - cert.crt:/etc/ssl/certs/opeqa.crt
       # - cert.key:/etc/ssl/certs/opeqa.key
